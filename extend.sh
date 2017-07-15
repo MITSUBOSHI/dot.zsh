@@ -13,6 +13,27 @@ elif [[ -s $HOME/.rvm/scripts/rvm ]] ; then
 fi
 
 # ------------------------------
+# direnv
+# ------------------------------
+if [[ -s /usr/local/bin/direnv ]] ; then
+  eval "$(direnv hook zsh)"
+fi
+
+# ------------------------------
+# pyenv
+# ------------------------------
+if [[ -s /usr/local/bin/pyenv ]] ; then
+  export PYENV_ROOT=$HOME/.pyenv
+  export PATH=$PYENV_ROOT/bin:$PATH
+  eval "$(pyenv init -)"
+fi
+
+# ------------------------------
+# PostgreSQL
+# ------------------------------
+export PGDATA=/usr/local/var/postgres
+
+# ------------------------------
 # JVM SBT
 # ------------------------------
 export SBT_OPTS='-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=1024M'

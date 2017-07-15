@@ -49,3 +49,18 @@ fpath=(${SCRIPT_DIR}/submodules/submodules/zsh-completions/src $fpath)
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 . ${SCRIPT_DIR}/extend.sh
+
+# ------------------------------
+# peco settings
+# ------------------------------
+bindkey '^]' peco-src
+
+function peco-src() {
+  local src=$(ghq list --full-path | peco --query "$LBUFFER")
+  if [-n "$src"]; then
+    BUFFER="cd $src"
+    zle accept-line
+  fi
+  zle -R -c
+}
+zle -N peco-src

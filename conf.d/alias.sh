@@ -50,8 +50,3 @@ alias gl="git log"
 alias gbranch="git branch"
 alias my_branch="git branch | grep '*' | sed 's;*;;g'"
 
-export PAGER=/usr/local/bin/vimpager
-alias less=$PAGER
-alias zless=$PAGER
-
-export SVN_EDITOR=vim
