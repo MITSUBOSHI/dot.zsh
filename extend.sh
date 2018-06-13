@@ -20,6 +20,12 @@ if [[ -s /usr/local/bin/direnv ]] ; then
 fi
 
 # ------------------------------
+# asdf
+# ------------------------------
+if  [[ -x "`which asdf`" ]] ; then
+  source /usr/local/opt/asdf/asdf.sh
+fi
+# ------------------------------
 # pyenv
 # ------------------------------
 if [[ -s /usr/local/bin/pyenv ]] ; then
@@ -32,6 +38,11 @@ fi
 # PostgreSQL
 # ------------------------------
 export PGDATA=/usr/local/var/postgres
+
+# ------------------------------
+# Java8
+# ------------------------------
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # ------------------------------
 # JVM SBT
