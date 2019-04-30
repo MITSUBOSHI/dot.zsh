@@ -13,6 +13,14 @@ elif [[ -s $HOME/.rvm/scripts/rvm ]] ; then
 fi
 
 # ------------------------------
+# anyenv
+# ------------------------------
+if  [[ -x "`which anyenv`" ]] ; then
+  export PATH="$HOME/.anyenv/bin:$PATH"
+  eval "$(anyenv init -)"
+fi
+
+# ------------------------------
 # direnv
 # ------------------------------
 if [[ -s /usr/local/bin/direnv ]] ; then
