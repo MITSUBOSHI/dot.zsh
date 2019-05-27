@@ -13,6 +13,13 @@ elif [[ -s $HOME/.rvm/scripts/rvm ]] ; then
 fi
 
 # ------------------------------
+# phpenv
+# ------------------------------
+if [[ -x "`which phpenv`" ]] ; then
+  eval "$(phpenv init - zsh)"
+fi
+
+# ------------------------------
 # anyenv
 # ------------------------------
 if  [[ -x "`which anyenv`" ]] ; then
