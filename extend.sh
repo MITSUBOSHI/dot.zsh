@@ -65,11 +65,6 @@ fi
 export PGDATA=/usr/local/var/postgres
 
 # ------------------------------
-# Java8
-# ------------------------------
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-
-# ------------------------------
 # JVM SBT
 # ------------------------------
 export SBT_OPTS='-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=1024M'
