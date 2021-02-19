@@ -5,7 +5,7 @@ function rprompt_git_current_branch {
   if [[ "$PWD" =~ '/\.git(/.*)?$' ]]; then
                 return
         fi
-        name=$(git branch --show-current)
+        name=$(git branch --show-current 2> /dev/null)
         if [[ -z $name ]]; then
                 return
         fi
