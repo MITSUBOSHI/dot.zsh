@@ -4,7 +4,7 @@ export EDITOR=vi
 # ------------------------------
 # Ruby
 # ------------------------------
-if [[ -s /usr/local/bin/rbenv ]] ; then
+if [[ -x "`which rbenv`" ]] ; then
   # rbenv
   eval "$(rbenv init - zsh)"
 elif [[ -s $HOME/.rvm/scripts/rvm ]] ; then
@@ -48,7 +48,7 @@ fi
 # asdf
 # ------------------------------
 if  [[ -x "`which asdf`" ]] ; then
-  source /usr/local/opt/asdf/asdf.sh
+  source `echo -e "$(brew --prefix asdf)/libexec/asdf.sh"`
 fi
 # ------------------------------
 # pyenv
