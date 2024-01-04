@@ -40,7 +40,7 @@ fi
 # ------------------------------
 # direnv
 # ------------------------------
-if [[ -s /usr/local/bin/direnv ]] ; then
+if  [[ -x "`which direnv`" ]] ; then
   eval "$(direnv hook zsh)"
 fi
 
@@ -53,7 +53,7 @@ fi
 # ------------------------------
 # pyenv
 # ------------------------------
-if [[ -s /usr/local/bin/pyenv ]] ; then
+if  [[ -x "`which pyenv`" ]] ; then
   export PYENV_ROOT=$HOME/.pyenv
   export PATH=$PYENV_ROOT/bin:$PATH
   eval "$(pyenv init -)"
