@@ -12,8 +12,13 @@ elif [[ -s $HOME/.rvm/scripts/rvm ]] ; then
   source $HOME/.rvm/scripts/rvm
 fi
 
+if [[ -x "`which go`" ]] ; then
+  export GOPATH=$HOME/go
+  export PATH=$PATH:$GOPATH/bin
+fi
+
 # ------------------------------
-# goenv
+# go
 # ------------------------------
 if [[ -s ~/.goenv  ]] ; then
   export GOENV_ROOT="$HOME/.goenv"
