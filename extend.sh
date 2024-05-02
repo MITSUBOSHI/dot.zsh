@@ -20,7 +20,7 @@ fi
 # ------------------------------
 # go
 # ------------------------------
-if [[ -s ~/.goenv  ]] ; then
+if [[ -d $HOME/.goenv  ]] ; then
   export GOENV_ROOT="$HOME/.goenv"
   export PATH="$GOENV_ROOT/bin:$PATH"
   export GOENV_DISABLE_GOPATH=1
@@ -77,7 +77,9 @@ export SBT_OPTS='-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:Max
 # ------------------------------
 # Haskell
 # ------------------------------
-export PATH=$PATH:$HOME/.cabal/bin
+if [[ -d $HOME/.cabel ]] ; then
+  export PATH=$PATH:$HOME/.cabal/bin
+fi
 
 # ------------------------------
 # kubectl krew
@@ -89,7 +91,9 @@ fi
 # ------------------------------
 # User local script
 # ------------------------------
-export PATH=$PATH:$HOME/bin
+if [[ -d $HOME/bin ]] ; then
+  export PATH=$PATH:$HOME/bin
+fi
 
 # ------------------------------
 # nvm
