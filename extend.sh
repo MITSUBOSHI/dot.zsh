@@ -88,6 +88,13 @@ export PATH=$PATH:$ANDROID_HOME/build-tools
 export PATH=$PATH:$HOME/.cabal/bin
 
 # ------------------------------
+# kubectl krew
+# ------------------------------
+if [[ -d $HOME/.krew ]] ; then
+  export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+fi
+
+# ------------------------------
 # User local script
 # ------------------------------
 export PATH=$PATH:$HOME/bin
