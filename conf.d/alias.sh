@@ -33,3 +33,6 @@ if [ -d ~/.ssh/conf.d ]; then
   alias ssh=": > ~/.ssh/config && echo '# DO NOT EDIT! Please edit conf.d/' >> ~/.ssh/config && find ~/.ssh/conf.d -type f | grep -v '/\.git' | xargs cat >> ~/.ssh/config; ssh"
 fi
 
+if  [[ -x "`which kde-open`" ]] ; then
+  alias open="kde-open"
+fi
