@@ -50,6 +50,13 @@ if  [[ -x "`which direnv`" ]] ; then
 fi
 
 # ------------------------------
+# opam
+# ------------------------------
+if  [[ -x "`which opam`" ]] ; then
+   source "$HOME/.opam/opam-init/init.zsh"
+fi
+
+# ------------------------------
 # asdf
 # ------------------------------
 if  [[ -x "`which asdf`" ]] ; then
