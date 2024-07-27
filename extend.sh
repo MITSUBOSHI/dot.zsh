@@ -12,7 +12,8 @@ elif [[ -s $HOME/.rvm/scripts/rvm ]] ; then
   source $HOME/.rvm/scripts/rvm
 fi
 
-if [[ -x "`which go`" ]] ; then
+if [[ -d /usr/local/go/bin ]] ; then
+  export PATH=$PATH:/usr/local/go/bin
   export GOPATH=$HOME/go
   export PATH=$PATH:$GOPATH/bin
 fi
