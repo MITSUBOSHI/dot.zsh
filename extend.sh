@@ -115,6 +115,14 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
 
 # ------------------------------
+# volta
+# ------------------------------
+if [[ -d $HOME/.volta ]] ; then
+  export VOLTA_HOME="$HOME/.volta"
+  export PATH="$VOLTA_HOME/bin:$PATH"
+fi
+
+# ------------------------------
 # user custom commands
 # ------------------------------
 . $SCRIPT_DIR/skinny.sh
