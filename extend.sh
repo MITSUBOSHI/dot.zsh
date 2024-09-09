@@ -28,6 +28,11 @@ if [[ -d $HOME/.goenv  ]] ; then
   eval "$(goenv init -)"
 fi
 
+if [[ -d $HOME/go ]] ; then
+  export GOPATH=$HOME/go
+  export PATH=$PATH:$GOPATH/bin
+fi
+
 # ------------------------------
 # phpenv
 # ------------------------------
